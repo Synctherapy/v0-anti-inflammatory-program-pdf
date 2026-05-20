@@ -124,3 +124,83 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Print Styles */
+@media print {
+  @page {
+    size: A4;
+    margin: 0.5in;
+  }
+
+  html {
+    font-size: 11pt;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page-break:last-child {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* Force colors to print */
+  .bg-secondary\/50,
+  .bg-secondary\/30 {
+    background-color: #f5f5f5 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bg-accent\/10 {
+    background-color: #fef3c7 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bg-amber-50 {
+    background-color: #fffbeb !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bg-primary {
+    background-color: #3d7a4a !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .text-primary {
+    color: #3d7a4a !important;
+  }
+
+  .text-accent {
+    color: #d4a574 !important;
+  }
+
+  .border-primary {
+    border-color: #3d7a4a !important;
+  }
+
+  .border-accent {
+    border-color: #d4a574 !important;
+  }
+
+  .border-amber-500 {
+    border-color: #f59e0b !important;
+  }
+
+  /* Hide non-printable elements */
+  .print\\:hidden {
+    display: none !important;
+  }
+}

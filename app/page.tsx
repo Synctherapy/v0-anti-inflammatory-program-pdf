@@ -1,5 +1,5 @@
-import { LandingPage } from "@/components/landing-page";
+import { PrintableGuide } from "@/components/printable-guide";
 
 export default function Home() {
-  return <LandingPage />;
+  return <PrintableGuide />;
 }
