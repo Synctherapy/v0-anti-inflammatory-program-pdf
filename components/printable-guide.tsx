@@ -175,29 +175,40 @@ export function PrintableGuide() {
               This is your go-to page. Print it. Put it on your fridge.
             </p>
 
-            {/* 4 Daily Essentials */}
+            {/* 5 Daily Essentials */}
             <div className="bg-secondary/50 border-l-4 border-primary p-5 rounded-r-lg mb-6 print:bg-gray-50">
               <h3 className="font-semibold text-foreground mb-3">
-                Do These 4 Things Every Day
+                Do These 5 Things Every Day
               </h3>
               <ul className="space-y-2">
                 <li className="flex gap-2">
                   <span className="text-primary font-bold">1.</span>
-                  <span>Take your 4 supplements (see Supplements page for details)</span>
+                  <span><strong>Take your supplements</strong> (4 supplements + 1 tbsp psyllium husk - see schedule)</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary font-bold">2.</span>
-                  <span>Eat 3 meals. No snacks. 12-hour overnight fast.</span>
+                  <span><strong>Eat breakfast one of two ways:</strong> chia pudding OR protein + fat. That&apos;s the only breakfast decision you make.</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary font-bold">3.</span>
-                  <span>Walk 10 minutes after lunch and after dinner.</span>
+                  <span><strong>Eat 3 meals. No snacks. 12-hour overnight fast.</strong></span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary font-bold">4.</span>
-                  <span>Sleep 7+ hours. Stop eating 2-3 hours before bed.</span>
+                  <span><strong>Walk 10 minutes after lunch and after dinner.</strong></span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-primary font-bold">5.</span>
+                  <span><strong>Sleep 7+ hours. Stop eating 2-3 hours before bed.</strong></span>
                 </li>
               </ul>
+            </div>
+
+            {/* Two-choice breakfast note */}
+            <div className="bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg mb-6 print:bg-amber-50">
+              <p className="text-sm text-muted-foreground">
+                <strong>The two-choice breakfast:</strong> Every morning is either a chia pudding (made the night before) or eggs/salmon with fat. You never have to wonder &quot;what&apos;s for breakfast&quot; again. Both keep your blood sugar flat and your energy steady till lunch.
+              </p>
             </div>
 
             {/* Meal Structure */}
@@ -273,59 +284,93 @@ export function PrintableGuide() {
               The 4 Supplements
             </h2>
             <p className="text-muted-foreground mb-6">
-              These supplements work together to heal your gut, reduce
-              inflammation, and restore energy.
+              These four work as a team. Here&apos;s what each one does inside your body - and exactly how you&apos;ll feel it.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-6">
-              <SupplementCard
-                number={1}
-                name="BodyBio Sodium Butyrate"
-                dose="1 cap with breakfast + 1 cap with dinner"
-                why="Fuels colon cells. Repairs gut lining. Reduces leaky gut and inflammation."
-                feelBy="Day 7-10 - Less bloating, calmer gut, clearer head"
-              />
-              <SupplementCard
-                number={2}
-                name="Seeking Health Zinc Carnosine"
-                dose="1 cap with breakfast + 1 cap at bedtime"
-                why="Sticks to inflamed gut tissue and slow-releases zinc. Reverses leaky gut in 14 days."
-                feelBy="Day 5-7 - Reflux drops, food reactivity softens"
-              />
-              <SupplementCard
-                number={3}
-                name="NOW Foods Super Enzymes"
-                dose="1 tablet with first bite of every meal"
-                why="Covers acid, protein, fat, and starch digestion. Stops fermentation and bloating."
-                feelBy="Day 2-4 - Less heaviness after meals, more energy"
-              />
-              <SupplementCard
-                number={4}
-                name="Pure Encapsulations NAC + Glycine"
-                dose="1 scoop in water, between meals (mid-morning)"
-                why="Restores glutathione (master antioxidant). Drops inflammation, improves energy."
-                feelBy="Day 10-14 - Steady energy, better mood, clearer skin"
-              />
+            {/* Supplement 1: Butyrate */}
+            <div className="border border-border rounded-lg p-4 mb-4">
+              <div className="flex items-start gap-2 mb-2">
+                <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+                <div>
+                  <h4 className="font-semibold text-foreground">BodyBio Sodium Butyrate</h4>
+                  <p className="text-accent font-medium text-sm">Take: 1 cap with breakfast + 1 cap with dinner</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>What it does in your body:</strong> Butyrate is the fuel your gut lining runs on. It seals up the &quot;leaky&quot; gaps between gut cells that let inflammation spill into your bloodstream. Less leak means less body-wide inflammation.
+              </p>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>How you&apos;ll feel:</strong> Calmer digestion, less bloating, and a clearer head. Many people notice their thinking feels sharper and their gut feels &quot;quiet&quot; for the first time in years.
+              </p>
+              <p className="text-xs text-primary font-medium">Timeline: Day 7-10.</p>
+            </div>
+
+            {/* Supplement 2: Zinc Carnosine */}
+            <div className="border border-border rounded-lg p-4 mb-4">
+              <div className="flex items-start gap-2 mb-2">
+                <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+                <div>
+                  <h4 className="font-semibold text-foreground">Seeking Health Zinc Carnosine</h4>
+                  <p className="text-accent font-medium text-sm">Take: 1 cap with breakfast + 1 cap at bedtime</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>What it does in your body:</strong> It physically coats and heals inflamed, irritated tissue in your stomach and gut - it was originally a prescription ulcer treatment in Japan. As the gut lining calms down, the low-grade inflammation that&apos;s been quietly traveling through your body settles too.
+              </p>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>How you&apos;ll feel:</strong> Reflux and that &quot;raw&quot; stomach feeling fade first. Then something people don&apos;t expect - <strong>the chronic tension in your neck and shoulders starts to ease, and general aches and stiffness lift.</strong> That&apos;s not a coincidence: a lot of everyday muscle tension and achiness is driven by low-grade gut inflammation. Calm the gut, and the body stops bracing.
+              </p>
+              <p className="text-xs text-primary font-medium">Timeline: Day 5-7 for the gut; aches and tension often by Week 2.</p>
+            </div>
+
+            {/* Supplement 3: Super Enzymes */}
+            <div className="border border-border rounded-lg p-4 mb-4">
+              <div className="flex items-start gap-2 mb-2">
+                <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+                <div>
+                  <h4 className="font-semibold text-foreground">NOW Foods Super Enzymes</h4>
+                  <p className="text-accent font-medium text-sm">Take: 1 tablet with the first bite of every meal (see &quot;When to Cut Back&quot; below)</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>What it does in your body:</strong> As we age and as the gut gets inflamed, we make less stomach acid and fewer digestive enzymes. Food then sits half-digested, ferments, feeds the wrong bacteria, and creates gas, bloating, and that heavy, tired feeling after meals. These enzymes do the breakdown work your gut is struggling to do, so food actually gets digested and absorbed.
+              </p>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>How you&apos;ll feel:</strong> This is the fastest win. Less heaviness and bloating after eating, more energy in the 2-3 hours after a meal, and - like the zinc carnosine - <strong>less of the achiness and tension that comes from a body fighting poorly-digested food.</strong> You absorb more of your protein and nutrients, so you&apos;re better fed at the cellular level.
+              </p>
+              <p className="text-xs text-primary font-medium mb-2">Timeline: Day 2-4.</p>
+              <p className="text-xs text-muted-foreground italic">
+                <strong>When to cut back:</strong> Take with every meal for the first 3-4 weeks while your gut heals. After that, your own digestion will have recovered enough that you only need them with bigger or heavier meals (a steak dinner, eating out, a protein-rich plate). Light meals won&apos;t need them anymore. That&apos;s a sign of progress - your gut is doing its own job again.
+              </p>
+            </div>
+
+            {/* Supplement 4: NAC + Glycine */}
+            <div className="border border-border rounded-lg p-4 mb-4">
+              <div className="flex items-start gap-2 mb-2">
+                <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+                <div>
+                  <h4 className="font-semibold text-foreground">Pure Encapsulations NAC + Glycine</h4>
+                  <p className="text-accent font-medium text-sm">Take: 1 scoop in water, between meals (mid-morning is ideal)</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>What it does in your body:</strong> These two amino acids rebuild glutathione - your body&apos;s master antioxidant and main detox molecule. By midlife, glutathione can be half what it was at 25, which is a big reason things feel harder, slower, and more inflamed. This refills the tank.
+              </p>
+              <p className="text-sm text-muted-foreground mb-2">
+                <strong>How you&apos;ll feel:</strong> Steadier, more even energy through the day. A less reactive, more level mood. Clearer, brighter skin. It&apos;s the most &quot;background&quot; of the four - you feel it as a general lift rather than one dramatic change.
+              </p>
+              <p className="text-xs text-primary font-medium">Timeline: Day 10-14.</p>
             </div>
 
             {/* Important Notes */}
-            <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-6 print:bg-amber-50">
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-4 print:bg-amber-50">
               <h3 className="font-semibold text-foreground mb-2">
                 Important Notes
               </h3>
               <ul className="text-sm space-y-1 text-muted-foreground">
-                <li>
-                  - Take NAC + Glycine on an empty stomach - food protein
-                  competes for absorption
-                </li>
-                <li>
-                  - Skip Super Enzymes if: active ulcer, on blood thinners,
-                  pineapple/papaya allergy
-                </li>
-                <li>
-                  - Sodium Butyrate has 156mg sodium per capsule - reduce if on
-                  salt restriction
-                </li>
+                <li>- Take NAC + Glycine on an empty stomach - food protein competes for absorption.</li>
+                <li>- Skip Super Enzymes if you have an active ulcer, take blood thinners, or have a pineapple/papaya allergy. Check with your practitioner.</li>
+                <li>- Sodium Butyrate has ~156 mg sodium per capsule (~313 mg for both daily caps). Reduce if you&apos;re on salt restriction or have high blood pressure.</li>
               </ul>
             </div>
 
@@ -350,9 +395,20 @@ export function PrintableGuide() {
                   <ScheduleRow time="Mid-Morning" items="1 scoop NAC + Glycine in water" />
                   <ScheduleRow time="Lunch" items="1 Super Enzyme" />
                   <ScheduleRow time="Dinner" items="1 Butyrate + 1 Super Enzyme" />
-                  <ScheduleRow time="Bedtime" items="1 Zinc Carnosine" />
+                  <ScheduleRow time="Bedtime" items="1 Zinc Carnosine + 1 tbsp psyllium husk in a big glass of water" />
                 </tbody>
               </table>
+            </div>
+
+            {/* Psyllium Note */}
+            <div className="bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg mt-4 print:bg-amber-50">
+              <h3 className="font-semibold text-foreground mb-2">Psyllium Every Single Day</h3>
+              <p className="text-sm text-muted-foreground mb-2">
+                This is non-negotiable - it&apos;s the daily fibre that firms your stool, feeds your gut, steadies blood sugar, and binds the junk your body is clearing out. Stir 1 tbsp into 8-10 oz of water, drink it fast (it gels), then chase it with another full glass.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>First 3 days:</strong> start with 1 tsp instead of 1 tbsp so your gut adjusts without bloating. Move up to the full tablespoon on Day 4.
+              </p>
             </div>
 
             <PageFooter page={4} />
@@ -757,7 +813,230 @@ export function PrintableGuide() {
           </div>
         </section>
 
-        {/* Page 9: Build Your Own Meal */}
+        {/* Page 9: Eat Freely / Evening Only / Pause For Now */}
+        <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
+                KEY PAGE
+              </span>
+            </div>
+            <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
+              Eat Freely / Evening Only / Pause For Now
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              <strong>This is the whole diet on one page. Three lists. No counting, no measuring.</strong> It&apos;s built on a simple idea backed by Swedish research (Lund University): when you pull back on starchy carbs and sugar - especially earlier in the day - your gut calms, bloating drops, and sugar cravings fade fast.
+            </p>
+
+            {/* Eat Freely */}
+            <div className="bg-secondary/50 border-l-4 border-primary p-5 rounded-r-lg mb-6 print:bg-gray-50">
+              <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                <span className="text-primary">EAT FREELY</span> <span className="text-sm font-normal text-muted-foreground">(any time, any amount)</span>
+              </h3>
+              <p className="text-sm text-muted-foreground mb-3">These are your foundation. Build every meal around them.</p>
+              
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="font-semibold text-foreground">Proteins</p>
+                  <p className="text-muted-foreground">Eggs, wild salmon, sardines, mackerel, chicken, turkey, grass-fed beef, bone broth, lactose-free Greek yogurt</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Fats</p>
+                  <p className="text-muted-foreground">Olive oil (use generously), avocado, ghee, butter, tahini, walnuts, pecans, almonds, chia, hemp hearts, flax</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Vegetables (cooked first)</p>
+                  <p className="text-muted-foreground">Carrots, zucchini, spinach, kale, bok choy, green beans, cucumber, red pepper, asparagus, 1 small tomato, olives</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Low-sugar fruit</p>
+                  <p className="text-muted-foreground">Green kiwi, blueberries, strawberries, raspberries, lemon, lime</p>
+                </div>
+                <div className="md:col-span-2">
+                  <p className="font-semibold text-foreground">Drinks</p>
+                  <p className="text-muted-foreground">Water, green tea, black coffee (before noon), herbal tea, bone broth, sparkling water</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Evening Only */}
+            <div className="bg-accent/10 border-l-4 border-accent p-5 rounded-r-lg mb-6 print:bg-amber-50">
+              <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                <span className="text-accent">EVENING ONLY</span> <span className="text-sm font-normal text-muted-foreground">(with dinner, after your day of movement)</span>
+              </h3>
+              <p className="text-sm text-muted-foreground mb-3">Your body handles carbs best at night - they help you sleep and they don&apos;t spike you when you&apos;ve been active all day. Keep these to the evening meal.</p>
+              
+              <ul className="text-sm text-muted-foreground space-y-1">
+                <li>- Rice (jasmine, basmati) - and cooled-then-reheated for lunch is fine too</li>
+                <li>- Potatoes and sweet potatoes</li>
+                <li>- Butternut and other winter squash</li>
+                <li>- Plantain, cassava</li>
+                <li>- A small portion of higher-sugar fruit (1/2 banana, a few grapes) if you want dessert</li>
+              </ul>
+              
+              <p className="text-xs text-muted-foreground mt-3 italic">
+                <strong>The one daytime exception:</strong> cooled-then-reheated rice or potato at lunch. Cooling turns it into resistant starch - it acts like a fibre, not a sugar, so it&apos;s gut-healing rather than blood-sugar-spiking.
+              </p>
+            </div>
+
+            {/* Pause For Now */}
+            <div className="bg-red-50 border-l-4 border-red-400 p-5 rounded-r-lg mb-6 print:bg-red-50">
+              <h3 className="font-semibold text-foreground mb-3 flex items-center gap-2">
+                <span className="text-red-600">PAUSE FOR NOW</span> <span className="text-sm font-normal text-muted-foreground">(first 21 days)</span>
+              </h3>
+              <p className="text-sm text-muted-foreground mb-3">These are the worst offenders for inflammation, bloating, and cravings. Not forever - just while you heal. You&apos;ll reintroduce some after Day 21.</p>
+              
+              <div className="grid md:grid-cols-2 gap-2 text-sm text-muted-foreground">
+                <div>- <strong>Sugar and sweets</strong> - candy, baked goods, anything with added sugar</div>
+                <div>- <strong>Bread, pasta, flour foods, cereal, oats</strong> (at breakfast and lunch especially)</div>
+                <div>- <strong>High-sugar fruit early in the day</strong> - apple, pear, banana, mango, dried fruit, fruit juice</div>
+                <div>- <strong>Seed oils</strong> - canola, soybean, corn, sunflower, &quot;vegetable oil&quot;</div>
+                <div>- <strong>Alcohol</strong> - disrupts the gut barrier and drains your antioxidants</div>
+                <div>- <strong>Ultra-processed food and fast food</strong></div>
+                <div>- <strong>Regular dairy with lactose</strong> (lactose-free hard cheese, butter, and ghee are fine)</div>
+                <div>- <strong>Onion and raw garlic</strong> early (use garlic-infused olive oil instead)</div>
+              </div>
+            </div>
+
+            <div className="bg-secondary/30 p-4 rounded-lg print:bg-gray-50">
+              <p className="text-sm text-muted-foreground">
+                <strong>The freeing part:</strong> you are never hungry on this plan. Anything in the green list, any time, as much as you want. You&apos;re not cutting calories - you&apos;re changing <em>which</em> foods, and <em>when</em>.
+              </p>
+            </div>
+
+            <PageFooter page={9} />
+          </div>
+        </section>
+
+        {/* Page 10: How To Eat With Your Family */}
+        <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
+              How To Eat With Your Family
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              <strong>You do not need to cook two dinners.</strong> The biggest reason people quit a program like this is the hassle of feeding everyone else. Here&apos;s how to eat this way while your family eats with you - often without them even noticing.
+            </p>
+
+            {/* The Core Trick */}
+            <div className="bg-secondary/50 border-l-4 border-primary p-5 rounded-r-lg mb-6 print:bg-gray-50">
+              <h3 className="font-semibold text-foreground mb-3">The Core Trick: Cook One Meal, Add Their Extras</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                Your anti-inflammatory dinner - <strong>protein + cooked veg + a starch</strong> - is just... dinner. It&apos;s already family food. The only difference is what gets <em>added</em> at the table.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="font-semibold text-foreground">Cook the shared base everyone eats:</p>
+                  <ul className="text-muted-foreground mt-1 space-y-1">
+                    <li>- A protein (roast chicken, salmon, beef, turkey)</li>
+                    <li>- A cooked vegetable or two</li>
+                    <li>- A starch (rice, potatoes, squash)</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Then let the family add what they want:</p>
+                  <ul className="text-muted-foreground mt-1 space-y-1">
+                    <li>- Bread or rolls (you skip them)</li>
+                    <li>- Pasta (or swap in <strong>Rummo GF pasta</strong> for the whole family)</li>
+                    <li>- A sauce or dessert you&apos;re pausing</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-3 italic">You ate the same meal. They added a couple of extras. Nobody cooked twice.</p>
+            </div>
+
+            {/* Real Family Dinners */}
+            <h3 className="font-semibold text-primary mb-3">Real Family Dinners That Work As-Is</h3>
+            <div className="border border-border rounded-lg overflow-hidden mb-6">
+              <table className="w-full text-sm">
+                <thead className="bg-secondary/50 print:bg-gray-100">
+                  <tr>
+                    <th className="text-left px-3 py-2 font-semibold text-primary">Family Meal</th>
+                    <th className="text-left px-3 py-2 font-semibold text-primary">Your Version</th>
+                    <th className="text-left px-3 py-2 font-semibold text-primary">Their Add-On</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 text-foreground">Roast chicken night</td>
+                    <td className="px-3 py-2 text-muted-foreground">Chicken + roast potatoes + carrots + olive oil</td>
+                    <td className="px-3 py-2 text-muted-foreground">Bread, gravy</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 text-foreground">Taco night</td>
+                    <td className="px-3 py-2 text-muted-foreground">Beef/chicken + rice + peppers in a bowl</td>
+                    <td className="px-3 py-2 text-muted-foreground">Tortillas, cheese, chips</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 text-foreground">Salmon dinner</td>
+                    <td className="px-3 py-2 text-muted-foreground">Salmon + sweet potato + green beans</td>
+                    <td className="px-3 py-2 text-muted-foreground">Dinner rolls</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 text-foreground">Spaghetti night</td>
+                    <td className="px-3 py-2 text-muted-foreground"><strong>Rummo GF pasta</strong> + meat sauce + side salad</td>
+                    <td className="px-3 py-2 text-muted-foreground">Garlic bread</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 text-foreground">Steak night</td>
+                    <td className="px-3 py-2 text-muted-foreground">Steak + roasted potato wedges + spinach</td>
+                    <td className="px-3 py-2 text-muted-foreground">Onion rings, sauce</td>
+                  </tr>
+                  <tr>
+                    <td className="px-3 py-2 text-foreground">Stir-fry</td>
+                    <td className="px-3 py-2 text-muted-foreground">Chicken + veg over rice (no sugary sauce)</td>
+                    <td className="px-3 py-2 text-muted-foreground">Extra noodles, sweet sauce</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Kids and Picky Eaters */}
+            <h3 className="font-semibold text-primary mb-3">Feeding Kids and Picky Eaters</h3>
+            <div className="grid md:grid-cols-2 gap-3 mb-6">
+              <div className="border border-border rounded-lg p-3">
+                <p className="text-sm text-muted-foreground"><strong>Rummo gluten-free pasta</strong> genuinely tastes like normal pasta - switch the whole household and save yourself a separate pot.</p>
+              </div>
+              <div className="border border-border rounded-lg p-3">
+                <p className="text-sm text-muted-foreground">Kids love <strong>cooled-then-reheated rice</strong> the same as fresh - your resistant-starch lunch base doubles as their dinner.</p>
+              </div>
+              <div className="border border-border rounded-lg p-3">
+                <p className="text-sm text-muted-foreground">Roasted potato wedges in olive oil beat fries, and kids don&apos;t complain.</p>
+              </div>
+              <div className="border border-border rounded-lg p-3">
+                <p className="text-sm text-muted-foreground"><strong>Hidden win:</strong> cooking with olive oil and butter instead of seed oils upgrades the whole family&apos;s meals with zero pushback.</p>
+              </div>
+            </div>
+
+            {/* Breakfast and Lunch */}
+            <h3 className="font-semibold text-primary mb-3">Breakfast and Lunch With a Busy Household</h3>
+            <ul className="text-sm text-muted-foreground space-y-2 mb-6">
+              <li>- <strong>Your breakfast is separate and fast</strong> - chia pudding (made the night before) or eggs. It doesn&apos;t interfere with whatever the kids are eating.</li>
+              <li>- Make a <strong>double batch of chia pudding</strong> - kids often love it with berries, and it&apos;s a far better breakfast than cereal.</li>
+              <li>- <strong>Your lunch is built from last night&apos;s leftovers</strong> (the cooled rice + protein bowl), so you&apos;re not making a separate thing.</li>
+            </ul>
+
+            {/* Social Stuff */}
+            <div className="bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg mb-4 print:bg-amber-50">
+              <h3 className="font-semibold text-foreground mb-2">The Social Stuff: Eating Out, Parties, Holidays</h3>
+              <ul className="text-sm text-muted-foreground space-y-2">
+                <li><strong>Restaurants:</strong> Order protein + cooked veg + rice or potato + olive oil. Skip the bread basket. Ask them to cook in butter or olive oil if you can. Most kitchens will.</li>
+                <li><strong>Parties and BBQs:</strong> Fill your plate with the grilled meats, salads, and veg. Skip the buns, chips, and sugary drinks. Bring sparkling water with lime so you&apos;ve always got a drink in hand.</li>
+                <li><strong>Holidays:</strong> Eat the turkey, the vegetables, the potatoes. Pass on the bread, the sugary sides, and the dessert (or take three bites and stop). One indulgent meal won&apos;t undo your progress - just return to the plan at the next meal.</li>
+              </ul>
+            </div>
+
+            <div className="bg-secondary/30 p-4 rounded-lg print:bg-gray-50">
+              <p className="text-sm text-muted-foreground">
+                <strong>The mindset that makes this stick:</strong> You&apos;re not on a restrictive diet that excludes you from family life. You&apos;re eating <em>real food</em> - meat, vegetables, rice, potatoes, good fats - that happens to be what humans thrived on for thousands of years. Your family can eat exactly what you eat. The only thing you&apos;re skipping is the processed stuff that wasn&apos;t doing any of you any favours.
+              </p>
+            </div>
+
+            <PageFooter page={10} />
+          </div>
+        </section>
+
+        {/* Page 11: Build Your Own Meal */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -883,11 +1162,11 @@ export function PrintableGuide() {
               </ul>
             </div>
 
-            <PageFooter page={9} />
+            <PageFooter page={11} />
           </div>
         </section>
 
-        {/* Page 10: Easy Recipes */}
+        {/* Page 12: Easy Recipes */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1013,11 +1292,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={10} />
+            <PageFooter page={12} />
           </div>
         </section>
 
-        {/* Page 11: Sunday Prep */}
+        {/* Page 13: Sunday Prep */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1115,11 +1394,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={11} />
+            <PageFooter page={13} />
           </div>
         </section>
 
-        {/* Page 12: Swap This For That */}
+        {/* Page 14: Swap This For That */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1170,11 +1449,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={12} />
+            <PageFooter page={14} />
           </div>
         </section>
 
-        {/* Page 13: Shopping Lists */}
+        {/* Page 15: Shopping Lists */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1280,11 +1559,11 @@ export function PrintableGuide() {
               </div>
             </div>
 
-            <PageFooter page={13} />
+            <PageFooter page={15} />
           </div>
         </section>
 
-        {/* Page 14: Troubleshooting */}
+        {/* Page 16: Troubleshooting */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1397,7 +1676,7 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={14} />
+            <PageFooter page={16} />
           </div>
         </section>
       </div>
