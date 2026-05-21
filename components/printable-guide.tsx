@@ -91,7 +91,7 @@ export function PrintableGuide() {
               <div className="border border-border rounded-lg p-4">
                 <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold mb-2">1</span>
                 <h4 className="font-semibold text-foreground text-sm">Order the 4 supplements</h4>
-                <p className="text-xs text-muted-foreground mt-1">They&apos;re listed on the Supplements page with exact brands. Order today so they arrive before you begin. (Total cost is roughly $80-120 and they last 1-2 months.)</p>
+                <p className="text-xs text-muted-foreground mt-1">They&apos;re listed on the Supplements page with exact brands and buy links. Order today so they arrive before you begin. (Total cost is roughly $80-120 and they last 1-2 months.) Yes, these are a bit expensive - but in my decade of experience they will have the most impact on how you feel. This isn&apos;t a lifelong supplement routine, just a short stint to make you noticeably feel better.</p>
               </div>
               <div className="border border-border rounded-lg p-4">
                 <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold mb-2">2</span>
@@ -235,30 +235,79 @@ export function PrintableGuide() {
             </div>
 
             {/* Fibre Ramp Schedule */}
-            <h3 className="font-semibold text-primary mb-3">
-              Fibre Ramp Schedule
+            <h3 className="font-semibold text-primary mb-2">
+              Your Fibre Ramp — Building To 30-38g A Day
             </h3>
-            <div className="border border-border rounded-lg overflow-hidden mb-6">
-              <table className="w-full text-sm">
+            <p className="text-sm text-muted-foreground mb-3">
+              <strong>Fibre is the single most powerful lever for your gut, your inflammation, and how young you feel.</strong> Fibre is the food your good gut bacteria eat. When they&apos;re fed, they produce butyrate — the fatty acid that heals your gut lining and calms inflammation across your whole body.
+            </p>
+            <p className="text-xs text-muted-foreground mb-3">
+              <strong>Targets:</strong> Women: ~30g/day | Men: ~38g/day | Everyone: aim for 30 different plants per week
+            </p>
+            <div className="bg-secondary/30 p-3 rounded-lg mb-4 print:bg-gray-50">
+              <p className="text-xs text-muted-foreground">
+                <strong>The 30-plants rule:</strong> Variety feeds variety. Different fibres feed different bacteria, so a diverse plate builds a diverse, resilient gut. Plants count generously — nuts, seeds, herbs, spices, even coffee and dark chocolate all count toward your 30.
+              </p>
+            </div>
+            <p className="text-xs text-muted-foreground mb-3">
+              <strong>Why we ramp slowly:</strong> If your gut isn&apos;t used to fibre, going from 12g to 35g overnight will bloat you and make you quit. We add it in stages so your bacteria multiply to match the supply. Your daily <strong>1 tbsp of psyllium husk</strong> is the anchor — it runs through this whole ramp on top of the food below.
+            </p>
+            <div className="border border-border rounded-lg overflow-hidden mb-4">
+              <table className="w-full text-xs">
                 <thead className="bg-secondary/50 print:bg-gray-100">
                   <tr>
-                    <th className="text-left px-4 py-2 font-semibold text-primary w-24">
-                      Days
-                    </th>
-                    <th className="text-left px-4 py-2 font-semibold text-primary">
-                      Add This
-                    </th>
+                    <th className="text-left px-3 py-2 font-semibold text-primary w-16">Days</th>
+                    <th className="text-left px-3 py-2 font-semibold text-primary">What To Add</th>
+                    <th className="text-left px-3 py-2 font-semibold text-primary w-16">Adds</th>
+                    <th className="text-left px-3 py-2 font-semibold text-primary w-20">Total*</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <FibreRow days="1-3" item="Cooled rice/potato at lunch + cooked carrots & zucchini" />
-                  <FibreRow days="4-6" item="1 tsp ground flax or chia at breakfast" />
-                  <FibreRow days="7-9" item="1 green kiwi/day + cooked spinach" />
-                  <FibreRow days="10-12" item="10 blueberries or strawberries" />
-                  <FibreRow days="13-15" item="1/2 tsp psyllium husk in water at bedtime" />
-                  <FibreRow days="16-21" item="Increase psyllium to 1 tsp; add one new cooked veg" />
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 font-medium text-foreground">1-3</td>
+                    <td className="px-3 py-2 text-muted-foreground">Psyllium 1 tsp + 1 cup cooled rice/potato at lunch + cooked carrots & zucchini at dinner</td>
+                    <td className="px-3 py-2 text-muted-foreground">~8-10g</td>
+                    <td className="px-3 py-2 text-muted-foreground">~15-18g</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 font-medium text-foreground">4-6</td>
+                    <td className="px-3 py-2 text-muted-foreground">Move psyllium to full 1 tbsp + 1 tbsp ground flax or chia at breakfast</td>
+                    <td className="px-3 py-2 text-muted-foreground">~5g</td>
+                    <td className="px-3 py-2 text-muted-foreground">~20-23g</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 font-medium text-foreground">7-9</td>
+                    <td className="px-3 py-2 text-muted-foreground">1 green kiwi + a big handful of cooked spinach daily</td>
+                    <td className="px-3 py-2 text-muted-foreground">~5g</td>
+                    <td className="px-3 py-2 text-muted-foreground">~24-27g</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 font-medium text-foreground">10-12</td>
+                    <td className="px-3 py-2 text-muted-foreground">1 cup berries + 1 tbsp mixed seeds (pumpkin, hemp, sunflower)</td>
+                    <td className="px-3 py-2 text-muted-foreground">~5g</td>
+                    <td className="px-3 py-2 text-muted-foreground">~28-31g</td>
+                  </tr>
+                  <tr className="border-b border-border">
+                    <td className="px-3 py-2 font-medium text-foreground">13-15</td>
+                    <td className="px-3 py-2 text-muted-foreground">A second cooked veg at dinner (broccoli, green beans, squash)</td>
+                    <td className="px-3 py-2 text-muted-foreground">~4g</td>
+                    <td className="px-3 py-2 text-muted-foreground">~30-34g</td>
+                  </tr>
+                  <tr>
+                    <td className="px-3 py-2 font-medium text-foreground">16-21</td>
+                    <td className="px-3 py-2 text-muted-foreground">Add 1/4 cup nuts/day + reach 30 different plants this week</td>
+                    <td className="px-3 py-2 text-muted-foreground">~4g</td>
+                    <td className="px-3 py-2 font-semibold text-primary">~34-38g</td>
+                  </tr>
                 </tbody>
               </table>
+            </div>
+            <p className="text-xs text-muted-foreground mb-4 italic">*Totals include the fibre already in your normal meals. Individual fibre counts vary — these are working estimates, not lab numbers.</p>
+            
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-lg mb-4 print:bg-amber-50">
+              <p className="text-xs text-muted-foreground">
+                <strong>The bloating rule:</strong> If any step makes you uncomfortably bloated, don&apos;t push to the next stage — hold where you are for 3 extra days, then continue. And drink more water as your fibre climbs: aim for 2.5-3L a day. Fibre without water is what causes the discomfort, not the fibre itself.
+              </p>
             </div>
 
             {/* What You Will Feel */}
@@ -289,12 +338,18 @@ export function PrintableGuide() {
 
             {/* Supplement 1: Butyrate */}
             <div className="border border-border rounded-lg p-4 mb-4">
-              <div className="flex items-start gap-2 mb-2">
-                <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
-                <div>
-                  <h4 className="font-semibold text-foreground">BodyBio Sodium Butyrate</h4>
-                  <p className="text-accent font-medium text-sm">Take: 1 cap with breakfast + 1 cap with dinner</p>
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <div className="flex items-start gap-2">
+                  <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+                  <div>
+                    <h4 className="font-semibold text-foreground">BodyBio Sodium Butyrate</h4>
+                    <p className="text-accent font-medium text-sm">Take: 1 cap with breakfast + 1 cap with dinner</p>
+                    <p className="text-xs text-muted-foreground">50 servings per bottle</p>
+                  </div>
                 </div>
+                <a href="https://ca.iherb.com/pr/bodybio-sodium-butyrate-100-capsules/105881?rcode=IQE9230" target="_blank" rel="noopener noreferrer" className="print:hidden bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-primary/90 transition-colors flex-shrink-0">
+                  Buy
+                </a>
               </div>
               <p className="text-sm text-muted-foreground mb-2">
                 <strong>What it does in your body:</strong> Butyrate is the fuel your gut lining runs on. It seals up the &quot;leaky&quot; gaps between gut cells that let inflammation spill into your bloodstream. Less leak means less body-wide inflammation.
@@ -307,12 +362,18 @@ export function PrintableGuide() {
 
             {/* Supplement 2: Zinc Carnosine */}
             <div className="border border-border rounded-lg p-4 mb-4">
-              <div className="flex items-start gap-2 mb-2">
-                <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
-                <div>
-                  <h4 className="font-semibold text-foreground">Seeking Health Zinc Carnosine</h4>
-                  <p className="text-accent font-medium text-sm">Take: 1 cap with breakfast + 1 cap at bedtime</p>
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <div className="flex items-start gap-2">
+                  <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Seeking Health Zinc Carnosine</h4>
+                    <p className="text-accent font-medium text-sm">Take: 1 cap with breakfast + 1 cap at bedtime</p>
+                    <p className="text-xs text-muted-foreground">60 servings per bottle</p>
+                  </div>
                 </div>
+                <a href="https://ca.iherb.com/pr/seeking-health-zinc-carnosine-75-mg-60-capsules/122670?rcode=IQE9230" target="_blank" rel="noopener noreferrer" className="print:hidden bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-primary/90 transition-colors flex-shrink-0">
+                  Buy
+                </a>
               </div>
               <p className="text-sm text-muted-foreground mb-2">
                 <strong>What it does in your body:</strong> It physically coats and heals inflamed, irritated tissue in your stomach and gut - it was originally a prescription ulcer treatment in Japan. As the gut lining calms down, the low-grade inflammation that&apos;s been quietly traveling through your body settles too.
@@ -325,12 +386,18 @@ export function PrintableGuide() {
 
             {/* Supplement 3: Super Enzymes */}
             <div className="border border-border rounded-lg p-4 mb-4">
-              <div className="flex items-start gap-2 mb-2">
-                <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
-                <div>
-                  <h4 className="font-semibold text-foreground">NOW Foods Super Enzymes</h4>
-                  <p className="text-accent font-medium text-sm">Take: 1 tablet with the first bite of every meal (see &quot;When to Cut Back&quot; below)</p>
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <div className="flex items-start gap-2">
+                  <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+                  <div>
+                    <h4 className="font-semibold text-foreground">NOW Foods Super Enzymes</h4>
+                    <p className="text-accent font-medium text-sm">Take: 1 tablet with the first bite of every meal (see &quot;When to Cut Back&quot; below)</p>
+                    <p className="text-xs text-muted-foreground">90 capsules per bottle</p>
+                  </div>
                 </div>
+                <a href="https://ca.iherb.com/pr/now-foods-super-enzymes-90-capsules/51072?rcode=IQE9230" target="_blank" rel="noopener noreferrer" className="print:hidden bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-primary/90 transition-colors flex-shrink-0">
+                  Buy
+                </a>
               </div>
               <p className="text-sm text-muted-foreground mb-2">
                 <strong>What it does in your body:</strong> As we age and as the gut gets inflamed, we make less stomach acid and fewer digestive enzymes. Food then sits half-digested, ferments, feeds the wrong bacteria, and creates gas, bloating, and that heavy, tired feeling after meals. These enzymes do the breakdown work your gut is struggling to do, so food actually gets digested and absorbed.
@@ -346,12 +413,18 @@ export function PrintableGuide() {
 
             {/* Supplement 4: NAC + Glycine */}
             <div className="border border-border rounded-lg p-4 mb-4">
-              <div className="flex items-start gap-2 mb-2">
-                <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
-                <div>
-                  <h4 className="font-semibold text-foreground">Pure Encapsulations NAC + Glycine</h4>
-                  <p className="text-accent font-medium text-sm">Take: 1 scoop in water, between meals (mid-morning is ideal)</p>
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <div className="flex items-start gap-2">
+                  <span className="bg-primary text-primary-foreground w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+                  <div>
+                    <h4 className="font-semibold text-foreground">Pure Encapsulations NAC + Glycine</h4>
+                    <p className="text-accent font-medium text-sm">Take: 1 scoop in water, between meals (mid-morning is ideal)</p>
+                    <p className="text-xs text-muted-foreground">30 servings per container</p>
+                  </div>
                 </div>
+                <a href="https://amzn.to/42MLAJA" target="_blank" rel="noopener noreferrer" className="print:hidden bg-primary text-primary-foreground text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-primary/90 transition-colors flex-shrink-0">
+                  Buy
+                </a>
               </div>
               <p className="text-sm text-muted-foreground mb-2">
                 <strong>What it does in your body:</strong> These two amino acids rebuild glutathione - your body&apos;s master antioxidant and main detox molecule. By midlife, glutathione can be half what it was at 25, which is a big reason things feel harder, slower, and more inflamed. This refills the tank.
@@ -510,7 +583,88 @@ export function PrintableGuide() {
           </div>
         </section>
 
-        {/* Page 6: Week 1 */}
+        {/* Page 6: Why We Eat Breakfast This Way */}
+        <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
+              Why We Eat Breakfast This Way
+            </h2>
+            <p className="text-muted-foreground mb-6">
+              <strong>Every breakfast on this plan is one of two things: protein + fat, or a chia pudding. Both are built on the same goal — keep your morning insulin flat.</strong> Here&apos;s why that one decision drives so much of how you&apos;ll feel.
+            </p>
+
+            {/* The Problem */}
+            <h3 className="font-semibold text-primary mb-3">The Problem With A Normal Breakfast</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Toast, cereal, oats, a muffin, juice, a sweet coffee — these flood your blood with sugar first thing in the morning. Your body answers with a big surge of <strong>insulin</strong> to clear it. An hour or two later you crash: tired, foggy, and hungry again, reaching for another quick carb. That spike-and-crash runs all day, and it does two things you don&apos;t want.
+            </p>
+
+            {/* Why Flat Insulin Matters */}
+            <h3 className="font-semibold text-primary mb-3">Why Flat Insulin Matters So Much</h3>
+            <div className="space-y-4 mb-6">
+              <div className="bg-secondary/50 border-l-4 border-primary p-4 rounded-r-lg print:bg-gray-50">
+                <p className="font-semibold text-foreground mb-2">1. Insulin is your &quot;store fat, stop burning fat&quot; switch.</p>
+                <p className="text-sm text-muted-foreground">
+                  When insulin is high, your body locks away fat and burns sugar instead. When insulin stays <em>low and steady</em>, your body can finally reach into its fat stores and burn them for fuel. A protein-and-fat breakfast keeps insulin low — so your morning becomes a fat-burning window instead of a fat-storing one.
+                </p>
+              </div>
+              <div className="bg-secondary/50 border-l-4 border-primary p-4 rounded-r-lg print:bg-gray-50">
+                <p className="font-semibold text-foreground mb-2">2. Chronically high insulin fuels inflammation.</p>
+                <p className="text-sm text-muted-foreground">
+                  Repeated insulin and blood-sugar spikes are themselves inflammatory — they stress your cells, drive oxidation, and keep your body in a low-grade &quot;alarm&quot; state. Flattening those spikes is one of the most direct ways to lower the inflammation that&apos;s making you feel old, stiff, and tired. Steady blood sugar = a calmer, less inflamed body.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg mb-6 print:bg-amber-50">
+              <p className="text-sm text-muted-foreground">
+                So a protein + fat breakfast gives you: <strong>steady energy with no crash, fewer cravings all day, an open fat-burning window, and lower inflammation.</strong> One small change, a lot of payoff.
+              </p>
+            </div>
+
+            {/* Option 1 */}
+            <h3 className="font-semibold text-primary mb-3">Option 1: Protein + Fat</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Eggs and avocado. Salmon and olive oil. Leftover meat with greens cooked in butter. Protein keeps you full and feeds your muscles; fat gives you slow, steady energy with zero blood-sugar spike. This is the simplest way to keep insulin flat for the whole morning.
+            </p>
+
+            {/* Option 2 */}
+            <h3 className="font-semibold text-primary mb-3">Option 2: The Chia Pudding (and why chia is special)</h3>
+            <p className="text-sm text-muted-foreground mb-3">
+              Chia isn&apos;t just a low-sugar carb swap — it actively works on your gut. Here&apos;s what it does:
+            </p>
+            <div className="space-y-3 mb-4">
+              <div className="border border-border rounded-lg p-3">
+                <p className="text-sm text-muted-foreground">
+                  <strong>It soothes and protects your gut lining.</strong> When chia soaks overnight, it forms a thick gel (called mucilage). That gel is mostly soluble fibre, and it behaves like a soft, soothing coat as it moves through you — supporting your gut&apos;s own protective mucus layer and calming irritation along the lining.
+                </p>
+              </div>
+              <div className="border border-border rounded-lg p-3">
+                <p className="text-sm text-muted-foreground">
+                  <strong>It feeds the bacteria that calm your whole body.</strong> Lower down, that same fibre becomes food for your good gut bacteria, who turn it into <strong>butyrate</strong> — the exact gut-healing, inflammation-calming fatty acid from the butyrate section. So your breakfast is literally feeding the repair process.
+                </p>
+              </div>
+              <div className="border border-border rounded-lg p-3">
+                <p className="text-sm text-muted-foreground">
+                  <strong>It keeps you full and steady.</strong> The gel slows digestion, so a chia breakfast releases its energy gently — no spike, no crash — and keeps you satisfied to lunch.
+                </p>
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              Add a scoop of protein powder or a spoon of hemp hearts and you&apos;ve got the best of both options: the gut-soothing fibre of chia <em>plus</em> the steady, insulin-flat fullness of protein. (Recipe variations are on the Easy Recipes page.)
+            </p>
+
+            <div className="bg-secondary/30 p-4 rounded-lg print:bg-gray-50">
+              <p className="text-sm text-muted-foreground">
+                <strong>The takeaway:</strong> Both breakfasts do the same job — flat insulin, steady energy, lower inflammation, and an open fat-burning window. The chia version adds a daily dose of gut-lining repair on top. Pick whichever fits your morning. There&apos;s no wrong choice between the two.
+              </p>
+            </div>
+
+            <PageFooter page={6} />
+          </div>
+        </section>
+
+        {/* Page 7: Week 1 */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -607,11 +761,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={6} />
+            <PageFooter page={7} />
           </div>
         </section>
 
-        {/* Page 7: Week 2 */}
+        {/* Page 8: Week 2 */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -709,11 +863,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={7} />
+            <PageFooter page={8} />
           </div>
         </section>
 
-        {/* Page 8: Week 3 */}
+        {/* Page 9: Week 3 */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -809,11 +963,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={8} />
+            <PageFooter page={9} />
           </div>
         </section>
 
-        {/* Page 9: Eat Freely / Evening Only / Pause For Now */}
+        {/* Page 10: Eat Freely / Evening Only / Pause For Now */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
@@ -904,11 +1058,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={9} />
+            <PageFooter page={10} />
           </div>
         </section>
 
-        {/* Page 10: How To Eat With Your Family */}
+        {/* Page 11: How To Eat With Your Family */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1032,11 +1186,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={10} />
+            <PageFooter page={11} />
           </div>
         </section>
 
-        {/* Page 11: Build Your Own Meal */}
+        {/* Page 12: Build Your Own Meal */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1162,11 +1316,11 @@ export function PrintableGuide() {
               </ul>
             </div>
 
-            <PageFooter page={11} />
+            <PageFooter page={12} />
           </div>
         </section>
 
-        {/* Page 12: Easy Recipes */}
+        {/* Page 13: Easy Recipes */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1292,11 +1446,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={12} />
+            <PageFooter page={13} />
           </div>
         </section>
 
-        {/* Page 13: Sunday Prep */}
+        {/* Page 14: Sunday Prep */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1394,11 +1548,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={13} />
+            <PageFooter page={14} />
           </div>
         </section>
 
-        {/* Page 14: Swap This For That */}
+        {/* Page 15: Swap This For That */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1449,11 +1603,11 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={14} />
+            <PageFooter page={15} />
           </div>
         </section>
 
-        {/* Page 15: Shopping Lists */}
+        {/* Page 16: Shopping Lists */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1559,11 +1713,11 @@ export function PrintableGuide() {
               </div>
             </div>
 
-            <PageFooter page={15} />
+            <PageFooter page={16} />
           </div>
         </section>
 
-        {/* Page 16: Troubleshooting */}
+        {/* Page 17: Troubleshooting */}
         <section className="page-break px-6 py-8 md:px-12 md:py-12 print:px-8 print:py-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-semibold text-primary border-b-2 border-primary pb-3 mb-4">
@@ -1676,7 +1830,7 @@ export function PrintableGuide() {
               </p>
             </div>
 
-            <PageFooter page={16} />
+            <PageFooter page={17} />
           </div>
         </section>
       </div>
